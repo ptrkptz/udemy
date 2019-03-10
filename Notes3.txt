@@ -1,0 +1,9 @@
+3.24
+Component Nesting
+	A component can be shown inside of another
+Component Reusability
+	make component that can be easily reusable
+Component Configuration
+	configure component when it is created
+
+3.25

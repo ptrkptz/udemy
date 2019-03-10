@@ -31,3 +31,129 @@ Babel
 	can write in ES2016 or newer, Babel, can convert to ES5, so all browsers can render
 
 1.8
+
+1.9
+npm start (project dir)
+
+Stop react app
+	Ctrl+C
+Start react app
+	npm start
+
+1.10
+Import
+	every file needs it own import statements
+
+1.11
+ES2015 allows function() to be replaced with =>
+	const App = function() {
+	  return <div>Hi there!</div>
+	};
+
+	can be replaced with
+	const App = () => {
+	  return <div>Hi there!</div>
+	};
+
+document.querySelector('#root')
+	built-in native function built into browsers
+	points back to index.html(public folder)
+		See 'body' tag
+
+1.12
+https://github.com/StephenGrider/redux-code
+	code base for instruction
+
+1.13
+navigated into dev package (C:\Users\pmp\git\udemy\jsx)
+Code Prettier
+	yarn add prettier --dev --exact
+		add to project
+	yarn prettier --write src/index.js
+		run against one file
+	yarn add pretty-quick husky --dev
+		run when committing
+		Then add this config to package.json
+			{ "husky": { "hooks": { "pre-commit": "pretty-quick --staged" } } }
+
+2.14
+What is JSX
+	Looks like HTML
+	babeljs.io
+		view the conversion of js to html
+	Write out function calls that are easier to read
+
+2.15
+Use codepen to build html, pasted in Atom
+return line -- need something on same line, else react assumes the end of statement and nothing further is done
+- industry standard, to wrap html with paren and then html starts on next line
+
+	const App = () => {
+	  return (
+	    <div>
+	      <label class="label" for="name">Enter name: </label>
+	      <input id="name" type="text"/>
+	      <button style ="background-color: blue; color: white;">Submit</button>
+	    </div>
+	  );  
+	};
+	
+2.16
+jsx vs HTML
+	styling 
+		1st '{' - reference a js variable
+		2nd '{' - js object
+		Any styling that has a '-', remove the dash and capitalize next character
+			background-color becomes backgroundColor
+
+	Ex.
+		html - <div style="border: 1 px solid red;"></div>
+		jsx - <div style={{border: '1 px solid red'}}></div>
+
+	html - <button style ="background-color: blue; color: white;">Submit</button>
+	jsx - <button style ={{backgroundColor: 'blue', color: 'white'}}>Submit</button>
+
+2.17
+double quotes require for a JSX string
+non-jsx convention - single quotes
+
+2.18
+NOt supposed to use class -- use className
+	label class="label"
+	label className="label"
+
+Avoid collisions with class declaration vs class attribute
+	class App extends React.Component
+		legacy issue
+
+2.19
+jsx can reference js variable
+	const buttonText = 'Click Me!'
+		js variable
+	{buttonText}
+		how to reference the variable
+
+	OR as a function
+	function getButtonText(){
+	  return 'Click on me!';
+	}
+	{getButtonText()}
+		note the parens - for function
+
+
+2.20 - JSX can reference JS variables
+const buttonText = {text:'Click me'};
+	js object
+		This will cause an error message -- Objects are not valid as a React child
+			JS object is not recognized in JSX
+	To fix - 
+	{buttonText.text}
+
+2.21 - forbidden Property names
+	for vs htmlFor
+		similar to class vs classname
+		- interpreted as a for loop
+
+2.22-23 Exercise Instruction
+	time was hard-coded, update with a function
+	{getTime()}
