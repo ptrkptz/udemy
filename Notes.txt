@@ -1,0 +1,33 @@
+React - Udemy notes
+
+http://goo.gl/T6zQ9q -- codepen url
+
+section 1, lecture 6
+Install Node JS
+	nodejs.org
+
+Install 'create-react-app'
+	npm install -g create-react-app
+		from command line (I used git bash)
+		npm -- node package manager
+		'-g' -- install globally, so can be run from terminal
+
+Create react project
+	create-react-app jsx
+		jsx is the name of the project 
+
+
+ -- OR -- 
+ 	npx create-react-app <project name>
+ 		this will install create-react-app AND create the new project
+
+
+1.7
+Babel
+	'ES'
+	ES2015 -- almost all supported
+	ES2016 and newer -- rarely supported
+
+	can write in ES2016 or newer, Babel, can convert to ES5, so all browsers can render
+
+1.8
