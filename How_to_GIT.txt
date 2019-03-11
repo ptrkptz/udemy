@@ -1,0 +1,8 @@
+From GitHub, create new repository
+	+ > New Repository
+	Click 'Clone or download' > copy URL
+
+Go to Git Bash
+	from c:/Users/pmp/git
+	git clone https://github.com/ptrkptz/exporttest.git
+

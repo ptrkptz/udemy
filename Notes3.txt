@@ -6,4 +6,11 @@ Component Reusability
 Component Configuration
 	configure component when it is created
 
-3.25
+3.25 application overview
+
+3.26
+semantic-ui.com
+	google semantic ui cdn
+		https://cdnjs.com/libraries/semantic-ui
+		 search for semantic.min.css > copy
+		 go to  public/index.html and paste under HEAD tag
