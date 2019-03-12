@@ -1,4 +1,4 @@
-3.24
+3.24
 Component Nesting
 	A component can be shown inside of another
 Component Reusability
@@ -14,3 +14,19 @@ semantic-ui.com
 		https://cdnjs.com/libraries/semantic-ui
 		 search for semantic.min.css > copy
 		 go to  public/index.html and paste under HEAD tag
+		 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+
+3.27 Naive component 
+
+3.28 image
+	faker js
+		github
+	from command line
+		npm install --save faker
+			'save' will save into our local project
+
+	<img alt="avatar" src={faker.image.avatar()} />
+
+3.29 duplicating
+
+

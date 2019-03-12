@@ -6,3 +6,9 @@ Go to Git Bash
 	from c:/Users/pmp/git
 	git clone https://github.com/ptrkptz/exporttest.git
 
+
+
+'react-scripts' is not recognized as an internal ERROR
+	npm install
+	npm start
+	
