@@ -29,4 +29,45 @@ semantic-ui.com
 
 3.29 duplicating
 
+3.30 componet
+	props 
 
+3.31
+	export statement
+		allow access to other files
+	import - forms link between
+	Show one component inside another we use the arrow brackets not curly
+		<CommentDetails /> == yes
+		{CommentDetails} == no
+
+3.32 Props (Properties) System
+	
+			App
+	Comment  Comment   Comment
+	 Detail   Detail    Detail
+
+	-- App is parent component
+	-- Comment Detail is child
+
+	Props -- system for passing data from parent to the child
+		goal is to customize or configure a child
+
+	see app-prop-commentDetail.png
+
+3.33 Passing & receiving props
+	Ex -- <CommentDetail author="Sam"/>
+		<CommentDetail author={author}/>
+			pass JS variable
+	<a href="/" className="author">
+	    {props.author}
+	  </a>
+
+3.34 passing multiple props
+	
+3.36 Component reuse
+	
+3.37 implement component
+	ApprovalCard.js
+
+3.38 showing custom children
+	use {props.children}
