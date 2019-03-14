@@ -71,3 +71,5 @@ semantic-ui.com
 
 3.38 showing custom children
 	use {props.children}
+
+3.39

@@ -1,0 +1,5 @@
+function getFunction(){
+	do stuff
+}
+
+{getFunction()}

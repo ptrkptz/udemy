@@ -1,0 +1,51 @@
+4.44 class-based components
+	functional components 
+		simple content
+
+	class components
+		everything else
+		Benefits
+			easier code organization
+			can use 'state' (another React system)
+				easier to handle user input
+			understand lifecycle events
+				easier to do things when the app starts up
+
+4.45 Application Overview
+	users physical location
+		from the browser
+	current month
+	change text and styling based on location + month
+
+4.46
+	framework build
+
+4.47 getting users physical location
+
+4.48 resetting location preferences
+		the i on the browser, this kicks down a site information (next to the url)
+			select 'Block'
+			results in Console = message: "User denied Geolocation"
+
+4.49 handling async operations with functional components
+	Time start
+		js file loaded by browser
+		app component is created
+		call geo location service
+			this takes a bit of time
+		app returns jsx, page starts to render
+		.
+		.
+		.
+		we get geolocation -- after waiting a bit
+
+4.50 refactor functional component to class component
+		(added to above)
+		Tell the component to rerender itself with new info
+
+	Rules of Class Components
+		must be a JS class
+		must extent (subclass) React.Component
+		Must define a 'render' method that returns some amount of JSX
+
+5.51 The Rules of State
