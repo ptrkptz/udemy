@@ -49,3 +49,56 @@
 		Must define a 'render' method that returns some amount of JSX
 
 5.51 The Rules of State
+ - only usable w/ class components
+ 	- hooks system ??
+  - you will confuse props with state
+  - 'state' is a js object that contains data relevant to a component
+  - updating 'state' on a component causes the component to (almost)instanly rerender
+  - state must be initialized when a component is created
+  - state CAN  only  be updated using the function 'setState'
+
+5.52 initialing state thorough constructors
+Constructor is not required
+Constructor is the first thing that is called when a new instance is spun up
+	good place to initialize state
+	Super -- 
+		reference to the parents construtor functions
+			ERROR: 'super has not been called'  if missing
+
+5.53 updating state properties
+5.54 app lifecycle walkthough
+	- js file loaded to browser
+	- instance of app component is created
+	- app component constructor function is called
+	- state object is created and assigned to the 'this.state' property
+	- we call geolocation service
+	- reat calls the the components render method
+	- app returns jsx, get rendered to the page as html
+	- we get geolocation 
+	- we udpate our state object with a call to 'this.setState'
+	- react see that we updated the state of a component
+	- react calls out 'render' method a 2nd time
+	- render method returns some (updated) JSX
+	- react takes that JSC and updates content on the screen
+
+5.55 handling errors gracefully
+
+
+5.56 conditional rendering
+	if(this.state.errorMessage && !this.state.lat) {
+      return <div>Error: {this.state.errorMessage}</div>;
+    }
+    if (!this.state.errorMessage && this.state.lat) {
+      return <div>Latitude: {this.state.lat}</div>;
+    }
+    return <div>Loading!</div>;
+
+6.57 intro lifecycle methods
+	- function we can optionally define inside our class based components
+
+	constructor
+	render (not optional)
+	componentDidMount
+	componentDidUpdate
+	componentWillUnmount
+
