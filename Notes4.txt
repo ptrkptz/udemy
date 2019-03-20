@@ -92,13 +92,3 @@ Constructor is the first thing that is called when a new instance is spun up
       return <div>Latitude: {this.state.lat}</div>;
     }
     return <div>Loading!</div>;
-
-6.57 intro lifecycle methods
-	- function we can optionally define inside our class based components
-
-	constructor
-	render (not optional)
-	componentDidMount
-	componentDidUpdate
-	componentWillUnmount
-
