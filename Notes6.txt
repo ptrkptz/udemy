@@ -1,0 +1,43 @@
+6.57 intro lifecycle methods
+	- function we can optionally define inside our class based components
+
+	constructor
+	render (not optional)
+	componentDidMount
+	componentDidUpdate
+	componentWillUnmount
+
+6.58 why lifecycle method?
+	constructor - good place for state initialization
+		do something outside of the api
+	render - avoid doing anything besides returning JSX
+	componentDidMonut
+		do initial data loading
+		do something ONE time
+			only invoked ONE time
+	componentDidUpdate
+		update when component is updated
+			*ex. - user updates a field*
+	componentWillUnmount
+		used for clean-up
+		using non-react libraries
+
+6.59 refactor data loading to lifecycle methods
+
+6.60 alternate state initialization
+	babeljs.io
+		used to test stuff
+
+6.61 Passing state as Props
+	
+6.62 Determining Season
+	
+6.63 Ternary expression in JSX
+	{} - used for JS variable or JS expression
+
+6.64 showing icons
+
+6.65 extract options to config objects
+
+6.66 adding some styling
+	
