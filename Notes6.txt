@@ -40,4 +40,116 @@
 6.65 extract options to config objects
 
 6.66 adding some styling
-	
+	webpack
+
+6.67 showing spinner
+
+6.68 Specify default props
+	can set default prop values by:
+		Spinner.defaultProps = {
+		  message 'Loading..'
+		}
+
+6.69 avoid conditionals in render
+	helper function
+
+6.70 review
+	benefits of 
+		class component
+			easier to organize code
+			can user 'state' (another react system)
+				easier to handle user input
+			understand lifecycle
+				easier to do things when the app first starts
+
+	rules of class components
+		must be a javascript class
+		must extend (subclass) React.Component
+		must define a 'render' method that returns some amount of JSX
+
+	rules of state
+		only usable with class component
+		your will confuse props with state
+		'state' is a JS object that contains data relevant to a component
+		updating 'state' on a component causes the component to (almost instantly rerender)
+		staet must be initialize when a component is created
+		state can only be updated using the function 'setState'
+
+	component lifecycle
+		constructor
+		render
+		componentDidMount
+		componentDidUpdate
+		componentWillUnmount
+
+6.71 exercise
+
+	BEFORE:
+	const UserForm = () => {
+        return (
+            <form>
+                <label>Enter a username:</label>
+                <input />
+            </form>
+        );
+    }
+
+	<script type="text/babel" data-presets="env,react">
+	import React from 'react';
+	import ReactDOM from 'react-dom';
+
+	class UserForm extends React.Component {
+	    render() {
+	        return (
+            <form>
+                <label>Enter a username:</label>
+                <input />
+            </form>
+        );
+	    }
+	}
+
+
+	    // Renders the App component into a div with id 'root'
+	    ReactDOM.render(<UserForm />, document.querySelector('#root'));
+	</script>
+
+
+6.72
+
+ class Clock extends React.Component {
+        componentDidMount() {
+            setInterval(() => {
+                this.time = new Date().toLocaleTimeString()    
+            }, 1000)
+        }
+        
+        render() {
+            return (
+                <div className="time">
+                    The time is: {this.time}
+                </div>
+            );
+        }
+    }
+
+ class Clock extends React.Component {
+        state = { time: ''};
+        componentDidMount() {
+            setInterval(() => {
+                 this.setState ({ time: new Date().toLocaleTimeString()})
+            }, 1000)
+        }
+        
+        render() {
+            return (
+                <div className="time">
+                    The time is: {this.state.time}
+                </div>
+            );
+        }
+    }
+
+ ** to optimize -- you could initialize time with:
+ 	state = { time: new Date().toLocaleTimeString() };
+ 		This will load a time RIGHT away
