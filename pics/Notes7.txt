@@ -1,0 +1,34 @@
+7.76 - add project structure
+
+7.77 showing forms to user
+
+7.78 - adding a touch of style
+	
+7.79 - creating event handlers
+	onChange={this.onInputChange}
+		note there is no () as is a not a function
+			if you add the (), everytime the render is call the onInputChange is called
+			by NOT having the (), the onChange is called only on the event
+	onChange
+	onClick
+	onSubmit
+
+7.80 - alternate event handler syntax
+	onChange={this.onInputChange} & associated function all to  (event) => console.log(event.target.value)
+		'arrow function'
+
+7.81 - controlled and uncontrolled elements
+	uncontrolled  (text input)
+
+
+7.82 - more on controlled elements
+	Start Flow here
+		User types in input
+		Callback gets invoked
+		We call setState with the new values
+		Components rerenders
+		Input is told what its value is (coming from state)
+			the Text box 'value' field is populated via 'this.state.term'
+	End flow
+
+	If the data/value is stored in STATE we can quickly and easily retrieve the data/value
