@@ -32,3 +32,19 @@
 	End flow
 
 	If the data/value is stored in STATE we can quickly and easily retrieve the data/value
+
+7.83 - handling form submittal
+	
+7.84 - understanding 'this' in Javascript
+	Most common error message
+	in onSubmit, we attempted to console.log(this.state.term) and received 'cannot read property "state" of undefined'
+
+	What is the value of 'this'?
+	How is the value of 'this' determined in a function?
+		value left of the '.' of where it is called from
+
+7.85 - Solving Context Issues
+
+7.86 - Communication child to parent
+
+7.87 - invoke callback children

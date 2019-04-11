@@ -1,0 +1,23 @@
+8.88 - fetching data
+	unsplashed.com
+
+8.89 - Axios vs Fetch
+	
+	React does NOT make the request to API
+		it is only show HTML or handling interactions
+	AJAX Client
+		this sends request to API
+
+	AXIOS
+		3rd party pkg (use npm)
+	FETCH
+		built into browsers
+		more basic (lower level)
+			alot more code to write (vs axios)
+
+	Install in project
+		npm install --save axios
+
+	the import list - usually the 3rd party are above the file that WE create
+
+8.90 - viewing request results

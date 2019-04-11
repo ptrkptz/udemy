@@ -2,12 +2,30 @@ import React from 'react';
 
 //use class b/c we need state, as we will need user input
 class SearchBar extends React.Component {
+  /*onInputChange(event)  {
+    console.log(event.target.value);
+  }*/
   state = {term: ''}
 
-onFormSubmit = (event) => {
+/* THIS IS BROKEN
+onFormSubmit(event){
   event.preventDefault();
-  //this was passed in from app.js
-  this.props.onSubmit(this.state.term);
+  console.log(this.state.term);
+}*/
+// This one works
+/*onFormSubmit = (event) => {
+  // arrow function automatically bind this
+  event.preventDefault();
+  console.log(this.state.term);
+}*/
+//<form onSubmit={this.onFormSubmit} className="ui form">
+// to this:
+//<form onSubmit={event => this.onFormSubmit(event)} className="ui form">
+
+onFormSubmit = (event) => {
+  // arrow function automatically bind this
+  event.preventDefault();
+  console.log(this.state.term);
 }
 
 
