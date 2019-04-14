@@ -1,1 +1,53 @@
 10.100 - Grid CSS
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    repeat - creates a set number of columns
+    auto-fill = css system will decide how many columns
+    minmax = each column is 250 px wide,
+      1fr = max allocation of space - in this context for each column that we create, make them all the same size
+
+10.101 - issues with grid CSS
+
+10.102 - creating an image card Component
+  de-structure -- we were referring to this.props.image multiple times, therefore to clean up... this below
+
+    alt={this.props.image.description}
+    src = {this.props.image.urls.regular}
+
+    we added/altered this:
+      const {description, urls} = this.props.image;
+      alt={description}
+      src = {urls.regular}
+
+10.103 accessing the DOM with refs
+  let the ImageCard render itself and its image
+  reach into the DOM and figure out the height of the image
+  set the image height on state to get the component to rerender
+  when rerendering, assign a 'gird-row-end' to make sure the image teakes up the appropriate space
+
+  When we need to reference item we do not use JS functions, instead in REACT, we use REF
+    REACT REFS
+      Gives access to a single DOM element
+      we create refs in the constructor, assign them to instance variables, then pass to a particular JSX elements as props
+
+10.104 - Accessing Image Height
+  this.imageRef=React.createRef();
+    by using this, we can figure out information about this DOM node
+
+    REFRESH - componentDidMount - is only called after render
+      componentDidMount() {
+        console.log(this.imageRef);
+      }
+        Then in the console, we are able to see the clientHeight
+
+10.105 - callbacks on image load
+  this.imageRef.current.addEventListener('load')
+    this indicates that the item is fully loaded and element is accessible
+
+10.106 - Dynamics Spans
+  "es2015 template string"
+    `spans ${this.state.spans}`
+
+10.107 - app review
+  With PROPS system, we ONLY communicate from a parent to a child
+  Need a key on the list we are rendering
+  createRef = can reach into the DOM
