@@ -1,3 +1,48 @@
 9.95 - rendering lists
 
 9.96 - review of map statements
+  OLD FOR LOOP
+  const number = [0,1,2]
+  let newNumbers = []
+  for (let i=0; i<number.length; i++) {
+    newNumbers.push(number[i] *10);
+    }
+  numbers; // this is printing out the values
+  newNumbers; // this is printing out the values
+
+  BETTER
+  const numbers = [0,1,2]
+  numbers.map((num) =>) {
+    return num*10
+  }
+  numbers; // this is printing out the values
+
+  MORE CONDENSED
+  const numbers = [0,1,2]
+  numbers.map(num => num * 10)
+  numbers; // this is printing out the values
+
+  OUR PROJECT
+  const numbers = [0,1,2]
+  numbers.map(num => <div>{num}</div>)
+
+9.97 Rendering lists of Components
+
+9.98 - the purpose of keys in a lists
+  error we received
+    Warning: Each child in a list should have a unique "key" prop.
+
+  key prop will reused the id from the array item
+    it is a performance consideration
+
+9.99 - implementing keys in lists
+    (also cleaning up warning/info in the console)
+  from:
+      const images = props.images.map((image) => {
+        return <img src={image.urls.regular} />
+      });
+
+  to:
+      const images = props.images.map(({description, id, urls}) => {
+        return <img key = { id } alt={ description} src={ urls.regular } />;
+      });
